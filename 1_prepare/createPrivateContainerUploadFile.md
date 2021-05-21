@@ -54,7 +54,7 @@ You can see the new resource group if you go to the [Azure portal](https://porta
 4. Deploy template. Make sure you define your Resource Group, the Azure Storage Account Name and Azure Private Container Name.
 
 ```
-az deployment group create --resource-group <resourcegroup> --template-file azuredeploy.json --parameters storageAccountName=<name> containerName=<name>
+az group deployment create --resource-group <resourcegroup> --template-file azuredeploy.json --parameters storageAccountName=<name> containerName=<name>
 ```
 
 That’s it! If you go to your [Azure Portal](https://portal.azure.com/) > Resource Groups > `GroupName`, you will see the Azure Storage Account resource available. Click on it and verify your container was also created. You can now store private files in that container.
